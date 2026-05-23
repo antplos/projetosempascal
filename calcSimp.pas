@@ -2,53 +2,61 @@ program CalculadoraSimples;
 {$MODE TP}
 {$H-}
 var
-        Operacao : Char;
-        Numero1 : Integer;
-        Numero2 : Integer;
-        Resultado: Real;
+        Saida : char;
+        Operacao : char;
+        Numero1 : integer;
+        Numero2 : integer;
+        Resultado: real;
+
+
+
 begin
-        Write('Escreva qual operacao voce deseja realizar [+] [-] [*] [/]:');
-        Readln(Operacao);
-        Writeln;
-        Write('Escreva o primeiro numero inteiro:');
-        Readln(Numero1);
-        Writeln;
-        Write('Escreva o segundo numero inteiro:');
-        Readln(Numero2);
-        Writeln;
 
-        if Operacao = '+' then
+        Operacao := 'X';
+        while (upcase(Operacao) <> 'S') do
         begin
-                Resultado := Numero1 + Numero2;
-                Writeln(Resultado:0:0);
-                Readln;
-        end
+                write('Escreva qual operacao voce deseja realizar [+] [-] [*] [/] [S](Sair):');
+                readln(Operacao);
+                writeln;
+                write('Escreva o primeiro numero inteiro:');
+                readln(Numero1);
+                writeln;
+                write('Escreva o segundo numero inteiro:');
+                readln(Numero2);
+                writeln;
 
-        else if Operacao = '-' then
-        begin
-                Resultado := Numero1 - Numero2;
-                Writeln(Resultado:0:0);
-                Readln;
-        end
+                if Operacao = '+' then
+                begin
+                        Resultado := Numero1 + Numero2;
+                        Writeln(Resultado:0:0);
+                        Readln;
+                        end
 
-        else if Operacao = '*' then
-        begin
-                Resultado := Numero1 * Numero2;
-                Writeln(Resultado:0:0);
-                Readln;
-        end
+                else if Operacao = '-' then
+                begin
+                        Resultado := Numero1 - Numero2;
+                        Writeln(Resultado:0:0);
+                        Readln;
+                end
 
-        else if Operacao = '/' then
-        begin
-                Resultado := Numero1 / Numero2;
-                Writeln(Resultado:0:2);
-                Readln;
-       end
+                else if Operacao = '*' then
+                begin
+                        Resultado := Numero1 * Numero2;
+                        Writeln(Resultado:0:0);
+                        Readln;
+                end
 
-        else
-                Write('Erro: digite apenas as opcoes apresentadas.');
-                Readln;
-        end.
+                else if Operacao = '/' then
+                begin
+                        Resultado := Numero1 / Numero2;
+                        Writeln(Resultado:0:2);
+                        Readln;
+                end
+
+                else
+                        Write('Erro: digite apenas as opcoes apresentadas.');
+                        Readln;
+                end
 
 
 end.
