@@ -4,8 +4,7 @@ program CalculadoraSimples;
 var
         Saida : char;
         Operacao : char;
-        Numero1 : integer;
-        Numero2 : integer;
+        Numero1, Numero2 : integer;
         Resultado: real;
 
 
