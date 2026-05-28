@@ -1,4 +1,4 @@
-program Teste.pas;
+program Teste;
 
 begin
     writeln('A maior integral e:', maxint);
