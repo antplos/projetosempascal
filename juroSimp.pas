@@ -1,6 +1,7 @@
 program juroSimp;
 {$MODE TP}
 {$H-}
+uses crt;
 
 var
         juros, capital, taxa, tempo, total: real;
@@ -10,12 +11,13 @@ begin
         writeln('BEM VINDO A CALCULADORA DE JUROS SIMPLES');
         writeln('INSIRA RESPECTIVAMENTE OS VALORES DO:');
         writeln('CAPITAL INICIAL');
+        readln(capital);
         writeln('TAXA DE JUROS');
+        readln(taxa);
         writeln('TEMPO DE APLICACAO');
-        read(capital);
-        read(taxa);
-        read(tempo);
+        readln(tempo);
         readln;
+        ClrScr;
         juros := capital * taxa * tempo / 100;
         total := capital + juros;
         writeln('O TOTAL ADQUIRIDO DURANTE A OPERACAO FOI DE: ', total:5:2);
